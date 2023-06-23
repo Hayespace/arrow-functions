@@ -14,11 +14,11 @@
     margin: 0;
   }
   
-  .row {
+  .logo {
       margin: 10px 10px;
   }
   
-  .row h2 {
+  .logo h2 {
       color: rgb(217, 166, 72);
       margin: auto;
       text-align: center;
@@ -33,7 +33,7 @@
   }
   
   .panel {
-      background-size: auto 100%;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 80vh;
@@ -77,6 +77,11 @@
       transition: opacity 1s ease-in-out 0.5s;
   }
   
+  .buttons {
+      margin: 0 auto;
+      max-height: 0 auto;
+  }
+  
     .btn {
         background-color: rgb(61, 40, 82);
         border-radius: 50px;
@@ -104,24 +109,18 @@
           width: auto;
           height: auto;
           margin-right: auto;
-          display: flexbox;
           align-items: flex;
           justify-content: center;
           height: auto;
       }
-      
-     
-      .panel:nth-of-type(4),
-      .panel:nth-of-type(4) {
-      display: none;
-      }
   }
   
-  @media(max-width: 1111px) {
+  
+  @media(max-width: 1185px) {
       .panel.active button {
          border-radius: 30px; 
-         height: 10vh;
-         width: 10vh;
+         height: 17vh;
+         width: 17vh;
          margin: 10px;
          justify-content: center;
          align-items: center;
@@ -129,26 +128,42 @@
       }
   }
   
-  @media(max-width: 550px) {
-      .container {
-          margin: 5px 5px;
+  @media(max-width: 1041px) {
+      .panel.active button {
+          height: 15vh;
+          width: 15vh;
+          margin: 3px;
+      }
       }
   
+  @media(max-width: 923px) {
+      .container {
+          margin: 10px 10px;
+      }
       .panel.active button {
-         border-radius: 20px; 
-         height: 5px;
-         width: 5px;
-         margin: 3px;
-         justify-content: center;
-  }
+          height: 13vh;
+          width: 13vh;
+          margin: 5px;
+      }
   
-      .row {
+  
+      .logo {
           display: none;
       }
-  
-      .vanish {
-      display: none;
   }
+  
+  @media(max-width: 569px) {
+      .panel.active button {
+          height: 10vh;
+          width: 10vh;
+          margin: 5px;
+      }
+  }
+  
+  @media(max-width: 518px) {
+      .vanish {
+          display: none;
+      }
   }
   
   
