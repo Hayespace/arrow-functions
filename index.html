@@ -12,7 +12,7 @@
         <div>
             <div>
               <div>
-                <a><img src="./assets/images/My project-1.png" height="150" width="150" alt="Drum machine logo"></a>
+                <a><img src="./assets/images/dummachine.png" height="150" width="150" alt="Drum machine logo"></a>
                 <h2>DRUM <br/> MACHINE</h2>
               </div>
             </div>
@@ -22,15 +22,15 @@
         <div class="panel active" style="background-image: url(./assets/images/808.jpg)">
           
           <div class="buttons">
-          <button class="btn">Kick</button>
-          <button class="btn">Snare</button>
-          <button class="btn">Hi Hat</button>
-          <button class="btn">Cymbal</button>
-          <button class="btn">Crash</button>
-          <button class="btn">Clap</button>
-          <button class="btn vanish">Conga</button>
-          <button class="btn vanish">Maraca</button>
-          <button class="btn vanish">Maraca</button>
+          <button data-key="65" class="btn" onclick="kick.play()">Kick</button>
+          <button data-key="83" class="btn" onclick="snare.play()">Snare</button>
+          <button data-key="68" class="btn" onclick="chh.play()">HiHat</button>
+          <button data-key="70" class="btn" onclick="hh.play()">Cymbal</button>
+          <button data-key="71" class="btn" onclick="crash.play()">Crash </button>
+          <button data-key="72" class="btn" onclick="clap.play()">Clap</button>
+          <button data-key="73" class="btn" onclick="conga.play()">Conga</button>
+          <button data-key="74" class="btn" onclick="cowbell.play()">Cowbell</button>
+          <button data-key="75" class="btn" onclick="shaker.play()">Shaker</button>
         </div>
           <h3>808</h3>
         </div>
@@ -44,9 +44,9 @@
           <button class="btn">Cymbal</button>
           <button class="btn">Crash</button>
           <button class="btn">Clap</button>
-          <button class="btn vanish">Conga</button>
-          <button class="btn vanish">Maraca</button>
-          <button class="btn vanish">Maraca</button>
+          <button class="btn">Conga</button>
+          <button class="btn">Cowbell</button>
+          <button class="btn">Shaker</button>
         </div>
         <h3>Vintage</h3>
         </div>
@@ -60,9 +60,9 @@
             <button class="btn">Cymbal</button>
             <button class="btn">Crash</button>
             <button class="btn">Clap</button>
-            <button class="btn vanish">Conga</button>
-            <button class="btn vanish">Maraca</button>
-            <button class="btn vanish">Maraca</button>
+            <button class="btn">Conga</button>
+            <button class="btn">Cowbell</button>
+            <button class="btn">Shaker</button>
           </div>
 
           <h3>EDM</h3>
@@ -70,6 +70,16 @@
        
   
       </div>
+
+      <audio data-key="65" src="assets/sounds/library-1/Kick.wav"></audio>
+      <audio data-key="83" src="assets/sounds/library-1/snare.wav"></audio>
+      <audio data-key="68" src="assets/sounds/library-1/ClosedHH.wav"></audio>
+      <audio data-key="70" src="assets/sounds/library-1/HH.wav"></audio>
+      <audio data-key="71" src="assets/sounds/library-1/Crash.wav"></audio>
+      <audio data-key="72" src="assets/sounds/library-1/clap.wav"></audio>
+      <audio data-key="74" src="assets/sounds/library-1/Conga.wav"></audio>
+      <audio data-key="75" src="assets/sounds/library-1/Cowbell.wav"></audio>
+      <audio data-key="76" src="assets/sounds/library-1/Shaker.wav"></audio>
   
 
     
