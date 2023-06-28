@@ -14,42 +14,50 @@ function removeActiveClasses() {
     })
 }
 
-function playSound(e){
-   
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-  
-   
-    if(!audio) return;
-    audio.currentTime = 0
-    audio.play()      
-
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+  this.classList.remove('playing');
 }
-  
-window.addEventListener('keydown', playSound)
 
- var kick = new Audio();
+function playSound(e){
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const button = document.querySelector(`.btn[data-key="${e.keyCode}"]`);
+    if(!audio) return;
+
+    audio.currentTime = 0;
+    audio.play();  
+    button.classList.add('playing');
+}
+
+const pads = document.querySelectorAll('.btn');
+pads.forEach(btn => btn.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playSound);
+
+
+ const kick = new Audio();
  kick.src = 'assets/sounds/library-1/Kick.wav';
 
- var snare = new Audio();
+ const snare = new Audio();
  snare.src = 'assets/sounds/library-1/snare.wav';
 
- var chh = new Audio();
+ const chh = new Audio();
  chh.src = 'assets/sounds/library-1/ClosedHH.wav';
 
- var hh = new Audio();
+ const hh = new Audio();
  hh.src = 'assets/sounds/library-1/HH.wav';
 
- var crash = new Audio();
+ const crash = new Audio();
  crash.src = 'assets/sounds/library-1/Crash.wav';
 
- var clap = new Audio();
+ const clap = new Audio();
  clap.src = 'assets/sounds/library-1/clap.wav';
 
- var conga = new Audio();
+ const conga = new Audio();
  conga.src = 'assets/sounds/library-1/Conga.wav';
 
- var cowbell = new Audio();
+ const cowbell = new Audio();
  cowbell.src = 'assets/sounds/library-1/Cowbell.wav';
 
- var shaker = new Audio();
+ const shaker = new Audio();
  shaker.src = 'assets/sounds/library-1/Shaker.wav';
+
